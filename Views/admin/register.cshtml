@@ -1,0 +1,271 @@
+﻿@{
+    ViewBag.Title = "register";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles  -->
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="~/assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+	<link href="~/assets/css/docs.css" rel="stylesheet"/>
+
+      
+    <link href="~/assets/style.css" rel="stylesheet"/>
+      <link href="~/assets/style1.css" rel="stylesheet" />
+	<link href="~/assets/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+	
+	<!-- Less styles  
+	<link rel="stylesheet/less" type="text/css" href="less/bootsshop.less">
+	<script src="less.js" type="text/javascript"></script>
+	 -->
+	
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/apple-touch-icon-57-precomposed.png">
+
+      <!-- Le javascript
+    ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+
+      <script src="~/assets/js/google-code-prettify/prettify.js"></script>
+      <script src="~/assets/js/application.js"></script>
+      <script src="~/assets/js/bootsshoptgl.js"></script>
+      <script src="~/assets/js/bootstrap-affix.js"></script>
+      <script src="~/assets/js/bootstrap-alert.js"></script>
+      <script src="~/assets/js/bootstrap-button.js"></script>
+      <script src="~/assets/js/bootstrap-carousel.js"></script>
+      <script src="~/assets/js/bootstrap-collapse.js"></script>
+      <script src="~/assets/js/bootstrap-datepicker.js"></script>
+      <script src="~/assets/js/bootstrap-dropdown.js"></script>
+      <script src="~/assets/js/bootstrap-modal.js"></script>
+      <script src="~/assets/js/bootstrap-popover.js"></script>
+      <script src="~/assets/js/bootstrap-scrollspy.js"></script>
+      <script src="~/assets/js/bootstrap-tab.js"></script>
+      <script src="~/assets/js/bootstrap-tooltip.js"></script>
+      <script src="~/assets/js/bootstrap-transition.js"></script>
+      <script src="~/assets/js/bootstrap-typeahead.js"></script>
+      <script src="~/assets/js/bootstrap.js"></script>
+      <script src="~/assets/js/bootstrap.min.js"></script>
+      <script src="~/assets/js/bootstrap.min.tmp.js"></script>
+      <script src="~/assets/js/daterangepicker.js"></script>
+      <script src="~/assets/js/jquery-slider1.js"></script>
+      <script src="~/assets/js/jquery.gallery1.js"></script>
+      <script src="~/assets/js/jquery.js"></script>
+      <script src="~/assets/js/jquery.lightbox-0.5.js"></script>
+      <script src="~/assets/js/jquery.min1.js"></script>
+      <script src="~/assets/js/jquery.ui.custom.js"></script>
+      <script src="~/assets/js/less.js"></script>
+      <script src="~/assets/js/modernizr.custom.534511.js"></script>
+  </head>
+<body>
+  
+<div class="row">
+<div id="sidebar" class="span3">
+</div>
+
+	<div class="span9">
+    <ul class="breadcrumb">
+		<li>Admin<span class="divider">/</span></li>
+		<li class="active">Registration</li>
+    </ul>
+	<h3> Registration</h3>	
+	<hr class="soft"/>
+	<div class="well">
+	<div>	 </div>
+	 <div >	 </div>
+        <form id="f1" class="form-horizontal" action="/Home/PassionDVDCollection" method="post">
+            <h3>Your personal information</h3>
+           @* <div class="control-group">
+                <label class="control-label" for="dob">Title <sup>*</sup></label>
+                <div class="controls">
+                    <select class="span1" name="Title" id="select1" required>
+                        <option value="">-</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs</option>
+                        <option value="Miss.">Miss</option>
+                    </select>
+                </div>
+            </div>*@
+
+            <div class="control-group">
+                <label class="control-label" for="inputFname">First name <sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" id="inputFname" placeholder="First Name" name="Fname" >
+                </div>
+            </div>
+            <script>
+                $('#inputFname').focusout(function () {
+
+                    var userName = $('#inputFname').val();
+                    $.getJSON("//CheckUserName?Fname=" + userName, function (data) {
+                        if (data) {
+                            alert("User First Name Already Exists.");
+                            $('#inputFname').val("");
+                        }
+                    });
+
+                });
+            </script>
+            <div class="control-group">
+                <label class="control-label" for="inputLname">Last name <sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" id="inputLname" placeholder="Last Name" name="Lname" >
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Email <sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" id="inputEmail" placeholder="Email" name="Email" >
+                </div>
+            </div>
+
+            <script>
+                $('#inputEmail').focusout(function () {
+
+                })
+            </script>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Password <sup>*</sup></label>
+                <div class="controls">
+                    <input type="password" id="inputPassword" placeholder="Password" name="Password" >
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Re-Enter Password <sup>*</sup></label>
+                <div class="controls">
+                    <input type="password" id="inputConfirmPassword" placeholder="Re-Enter Password" >
+                </div>
+            </div>
+
+            <script>
+                $('#inputConfirmPassword').focusout(function () {
+                    if ($('#inputPassword').val() != $('#inputConfirmPassword').val()) {
+                        alert("Password Mismatch")
+                        $('#inputPassword').val("");
+                        $('#inputConfirmPassword').val("");
+                    }
+                })
+            </script>
+            <div class="control-group">
+                <label class="control-label" for="dob">Date of Birth <sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" id="dob" placeholder="Date of Birth" name="DOB" value="@System.DateTime.Now.Date" >
+                </div>
+            </div>
+
+
+
+            <h3>Your address</h3>
+            <div class="control-group">
+                <label class="control-label" for="adress">Address<sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" id="address" placeholder="Adress" name="Address"  /> <span>Street address, P.O. box, company name, c/o</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="country">Country<sup>*</sup></label>
+                <div class="controls">
+                    <select id="country" name="Country" >
+                        <option value="Pakistan">Pakistan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="province">Province<sup>*</sup></label>
+                <div class="controls">
+                    <select id="province" style="width:auto" name="Province" >
+                        <option value="0">-----</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Sindh">Sindh</option>
+                        <option value="Blochistan">Blochistan</option>
+                        <option value="KPK">KPK</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="city">City<sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" id="city" placeholder="city" name="City" />
+                </div>
+            </div>
+
+
+
+            <div class="control-group">
+                <label class="control-label" for="company">Company</label>
+                <div class="controls">
+                    <input type="text" id="company" placeholder="company" name="Company" />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="aditionalInfo">Additional information</label>
+                <div class="controls">
+                    <textarea name="Aditional_Info" id="aditionalInfo" cols="26" rows="3" placeholder="Additional information"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="phone">Home phone <sup>*</sup></label>
+                <div class="controls">
+                    <input type="text" name="Phone" id="phone" placeholder="phone" required /> <span>You must register at least one phone number</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="mobile">Mobile Phone </label>
+                <div class="controls">
+                    <input type="text" name="Mobile" id="mobile" placeholder="Mobile Phone" />
+                </div>
+            </div>
+
+            <p><sup>*</sup>Required field	</p>
+
+            <div class="control-group">
+                <div class="controls">
+                    <input type="hidden" name="email_create" value="1">
+                    <input type="hidden" name="is_new_customer" value="1">
+                    <input class="btn btn-large" type="submit" value="Register" id="sub" />
+                </div>
+                <!--<script>
+                $('#sub').click(function () {
+                    if ( $('#select1').val() == "0" || $('#days').val() == "0" || $('#mon').val() == "0" ||
+                         $('#year').val() == "0" || $('#inputFname').val() == "" || $('#inputLname').val() == "" || $('#inputEmail').val() == "" ||
+                         $('#inputPassword').val() == "" || $('#address').val() == "" || $('#city').val() == "" ||
+                         $('#province').val() == 0 || $('#phone').val() == "" || $('#inputConfirmPassword').val()==""){
+                        alert("fields are empty");
+                    }
+                    else
+                    {
+                        $('#f1').submit();
+                    }
+                }
+                )
+            </script>-->
+            </div>
+        </form>
+</div>
+
+</div>
+</div>  
+  </body>
+
+</html>

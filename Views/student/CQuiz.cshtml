@@ -1,0 +1,170 @@
+﻿@model Bilal.Models.Quiz
+@using Bilal.Models
+
+@{
+    ViewBag.Title = "CQuiz";
+}
+
+<h2>CQuiz</h2>
+
+@*<fieldset>
+    <legend>Quiz</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Question)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Question)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option4)
+
+    </div>
+    
+</fieldset>
+@{
+    
+    var p=(Quiz)ViewData["QQ"];    
+}
+
+<link href="~/data/css/grayscale.css" rel="stylesheet">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /> 
+
+                            @p.Question
+                            @p.Option1
+                            @p.Option2
+                            @p.Option3
+                            @p.Option4*@
+      <div align="center" class="panel panel-danger" >
+    <div class="panel-heading">
+    <h3 class="panel-title" id="title">@Model.Question</h3>
+
+  </div>
+             <div class="panel-body" >
+    <form action="/Student/StartQuiz">
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="op" value="Option1" required/></td>
+                <td>
+                    <span align="left" id="A" class="bg-danger">@Model.Option1</span>
+                    
+                </td>
+             </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="op"value="Option2"/ required></td>
+                <td>
+                    <span align="left" id="B" class="bg-danger">@Model.Option2</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="op" value="Option3"/ required></td>
+                <td>
+                    <span align="left" id="C" class="bg-danger">@Model.Option3</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="op" value="Option4" required/>
+
+                </td>
+                 <td>
+                    <span align="left" id="D" class="bg-danger">@Model.Option4</span><br><br><br>
+                </td>
+            </tr>
+            </table>
+             <div >
+        <input type="submit" class="btn btn-success" value="Next" id="next1">
+      </div>
+        </form>
+                 <form action="/Student/result" method="post">
+                 <div>
+                     
+                     <input type="submit" class="btn btn-success" value="Result" id="next">
+
+                 </div>
+                     </form>
+         </div>
+
+       @*<label class="checkbox-inline">
+      <input type="checkbox" id="inlineCheckbox1" value="op1" />@Model.Option1
+           </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" id="inlineCheckbox2" value="op2" />@Model.Option2
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" id="inlineCheckbox3" value="op3" />@Model.Option3
+    </label>
+
+    <label class="checkbox-inline">
+      <input type="checkbox" id="inlineCheckbox4" value="op4" />@Model.Option4
+    </label>*@
+           
+@*<h2>Question</h2>
+
+    <form action="/Student/CheckAnswer" method="post">
+              <div class="form-group has-success has-feedback">
+      <label class="control-label" for="inputSuccess2"></label>
+      <h5><input type="text" class="form-control" id="inputSuccess2"></h5>
+      <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+</div>
+      <div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >
+    Option three is disabled
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+    Option three is disabled
+  </label>
+</div>
+        <button type="submit" name="submit" value="next" class="btn btn-success">Next</button>
+        </form>*@
+
+

@@ -1,0 +1,58 @@
+﻿@model Bilal.Models.Quiz
+@{
+    ViewBag.Title = "addQuestions";   
+}
+
+<form action="/Admin/AddQ" method="post">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+<b><i> Enter Question: </i></b><textarea class="form-control" rows="3" name="Question" cols="10"></textarea>
+    <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Option 1</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="o1" name="Option1" placeholder="Option 1" required>
+    </div>
+  </div>
+
+
+    <div>
+    <label for="inputPassword3" class="col-sm-2 control-label">Option 2</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="o2" name="Option2" placeholder="Option 2" required>
+    </div>
+  </div>
+
+
+    <div>
+    <label for="inputPassword3" class="col-sm-2 control-label">Option 3</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="o3" name="Option3" placeholder="Option 3" required>
+    </div>
+  </div>
+
+
+    <div>
+    <label for="inputPassword3" class="col-sm-2 control-label">Option 4</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="o4" name="Option4" placeholder="Option 4" required>
+    </div>
+  </div>
+
+
+    <div class="form-group has-success">
+      <label class="control-label" for="inputSuccess1">CorrectAnswer</label>
+       <input type="text" class="form-control"  name="Correct_Answer" required>
+    </div>
+
+    <!-- Indicates a successful or positive action -->
+        <button type="submit" class="btn btn-success">Success</button>
+    </form>
+
+
+

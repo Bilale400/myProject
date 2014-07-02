@@ -1,0 +1,18 @@
+﻿@model Bilal.Models.Student
+
+@{
+    ViewBag.Title = "menu";        
+}
+
+        <link href="~/data/css/grayscale.css" rel="stylesheet">
+    
+        <img src="~/images/pic1.png" class="img-responsive" alt="Responsive image"/>
+
+
+        <form action="/Student/selectChoice" method="post">
+       <br /><br /><h1> Select your Course for Quiz: </h1><br />         
+       <button type="submit"  name="android" value="android" class="btn btn-primary btn-lg active">Android</button><br />
+       <button type="submit"  name="android" value="net" class="btn btn-success btn-lg active">C# .Net</button>                     
+       </form>  
+        
+    

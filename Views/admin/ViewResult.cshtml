@@ -1,0 +1,69 @@
+﻿@model Bilal.Models.Student
+
+@{
+    ViewBag.Title = "ViewResult";
+}
+
+<h2>ViewResult</h2>
+
+<fieldset>
+    <legend>Student</legend>
+    <h4>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => @Model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => @Model.Password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => @Model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Date_of_Birth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model =>@Model.Date_of_Birth)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => @Model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => @Model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone_Number)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model =>@Model.Phone_Number)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Marks)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => @Model.Marks)
+    </div>
+        </h4>
+</fieldset>
+

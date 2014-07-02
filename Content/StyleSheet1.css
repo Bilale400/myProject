@@ -1,0 +1,17 @@
+﻿/*/*body{
+	background-image:url(~/images/pic1.png) ;
+    background-repeat:no-repeat;
+	font-family: 'Oleo Script', cursive;
+}
+body{
+	background-image: url(../img/pic1.jpg);
+	font-family: 'Oleo Script', cursive;
+	max-width: 100%;
+	 height: auto;
+}*/
+body {
+background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
